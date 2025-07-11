@@ -44,12 +44,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DB_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'laravel'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', ''),
+            'url' => env('MYSQL_URL'), // Opsional, jika Railway menyediakan satu URL koneksi lengkap
+            'host' => env('MYSQL_HOST', '127.0.0.1'), // UBAH DARI DB_HOST
+            'port' => env('MYSQL_PORT', '3306'),     // UBAH DARI DB_PORT
+            'database' => env('MYSQL_DATABASE', 'laravel'), // UBAH DARI DB_DATABASE
+            'username' => env('MYSQL_USER', 'root'),         // UBAH DARI DB_USERNAME
+            'password' => env('MYSQL_PASSWORD', ''),      // UBAH DARI DB_PASSWORD
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => env('DB_CHARSET', 'utf8mb4'),
             'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
@@ -61,7 +61,6 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-
         'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),
