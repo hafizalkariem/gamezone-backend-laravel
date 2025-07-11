@@ -19,7 +19,12 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => [
+        'http://localhost:3000', // Tambahkan ini untuk pengembangan lokal React
+        'http://localhost:5173', // Tambahkan ini jika Anda menggunakan Vite dev server
+        'https://gamezone-rental-ps.netlify.app', // Hapus trailing slash
+        // Tambahkan domain kustom Netlify Anda di sini juga jika ada (misal: 'https://your-custom-domain.com')
+    ],
 
     'allowed_origins_patterns' => [],
 
@@ -29,6 +34,6 @@ return [
 
     'max_age' => 0,
 
-    'supports_credentials' => false,
+    'supports_credentials' => true,
 
 ];
