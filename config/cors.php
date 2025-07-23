@@ -20,10 +20,13 @@ return [
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
-        'http://localhost:3000', // Tambahkan ini untuk pengembangan lokal React
-        'http://localhost:5173', // Tambahkan ini jika Anda menggunakan Vite dev server
-        'https://gamezone-rental-ps.netlify.app', // Hapus trailing slash
-        // Tambahkan domain kustom Netlify Anda di sini juga jika ada (misal: 'https://your-custom-domain.com')
+        'http://localhost:3000', // Local React development
+        'http://localhost:5173', // Vite dev server
+        'https://gamezone-rental-ps.netlify.app', // Netlify deployment
+        // Add your Railway frontend domain here - REPLACE WITH YOUR ACTUAL DOMAIN
+        'https://your-frontend-app.up.railway.app',
+        // You can also use wildcard for Railway subdomains (less secure)
+        // 'https://*.up.railway.app',
     ],
 
     'allowed_origins_patterns' => [],
